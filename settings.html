@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances and Profits</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+    fieldset {
+        overflow: hidden
+      }
+      
+      .some-class {
+        float: left;
+        clear: none;
+      }
+      
+      label {
+        float: left;
+        clear: none;
+        display: block;
+        padding: 0px 1em 0px 8px;
+      }
+      
+      input[type=radio],
+      input.radio {
+        float: left;
+        clear: none;
+        margin: 2px 0 0 2px;
+      }
+
+      input[type=submit],
+      input.submit {
+        float: left;
+        clear: none;
+        margin: 2px 0 0 2px;
+      }
+      </style>
+</head>
+
+<body>
+    <section class="main">
+        <!-- -------left side dashboard------ -->
+        <div class="dashboard dashboard-lg">
+            <div class="logo">
+                <div class="top">
+                    <img src="images/d-logo.png" alt="">
+                </div>
+            </div>
+            <h2>Admin Dashboard</h2>
+            <nav>
+                <div class="nav-item">
+                    <a href="dashboard.html">
+                        <div class="icon">
+                            <img src="images/d-1.png" alt="">
+                        </div>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="agents.html">
+                        <div class="icon">
+                            <img src="images/d-2.png" alt="">
+                        </div>
+                        <span>Agents</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="employee.html">
+                        <div class="icon">
+                            <img src="images/d-3.png" alt="">
+                        </div>
+                        <span>Employees</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="cities.html">
+                        <div class="icon">
+                            <img src="images/d-4.png" alt="">
+                        </div>
+                        <span>Cities</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="orders-1.html">
+                        <div class="icon">
+                            <img src="images/d-5.png" alt="">
+                        </div>
+                        <span>Orders</span>
+                    </a>
+                </div>
+                <!-- <div class="nav-item">
+                    <a href="transection-history.html">
+                        <div class="icon">
+                            <img src="images/d-6.png" alt="">
+                        </div>
+                        <span>Transection<br> history</span>
+                    </a>
+                </div> -->
+                <div class="nav-item">
+                    <a href="add-balance.html">
+                        <div class="icon">
+                            <img src="images/d-7.png" alt="">
+                        </div>
+                        <span>Add Balance</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="finance-and-profits.html">
+                        <div class="icon">
+                            <img src="images/d-8.png" alt="">
+                        </div>
+                        <span class="active">Finance <br> & Profits</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="expenses.html">
+                        <div class="icon">
+                            <img src="images/d-9.png" alt="">
+                        </div>
+                        <span>Expenses</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="payroll.html">
+                        <div class="icon">
+                            <img src="images/d-10.png" alt="">
+                        </div>
+                        <span>Payroll</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="chat.html">
+                        <div class="icon">
+                            <img src="images/d-11.png" alt="">
+                        </div>
+                        <span>Chat</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- ----responsive-dashboar--- -->
+        <div class="dashboard dashboard-res">
+            <div class="logo">
+                <div class="top toggler-res">
+                    <img src="images/ham.png" alt="">
+                </div>
+            </div>
+            <!-- <h2>Admin Dashboard</h2> -->
+            <nav>
+                <div class="nav-item">
+                    <a href="dashboard.html">
+                        <div class="icon">
+                            <img src="images/d-1.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="agents.html">
+                        <div class="icon">
+                            <img src="images/d-2.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="employee.html">
+                        <div class="icon">
+                            <img src="images/d-3.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="cities.html">
+                        <div class="icon">
+                            <img src="images/d-4.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="orders-1.html">
+                        <div class="icon">
+                            <img src="images/d-5.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="nav-item">
+                    <a href="transection-history.html">
+                        <div class="icon">
+                            <img src="images/d-6.png" alt="">
+                        </div>
+                    </a>
+                </div> -->
+                <div class="nav-item">
+                    <a href="">
+                        <div class="icon">
+                            <img src="images/d-7.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="finance-and-profits.html">
+                        <div class="icon">
+                            <img src="images/d-8.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="expenses.html">
+                        <div class="icon">
+                            <img src="images/d-9.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="payroll.html">
+                        <div class="icon">
+                            <img src="images/d-10.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="chat.html">
+                        <div class="icon">
+                            <img src="images/d-11.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- -------right side main content------ -->
+        <div class="main-content">
+            <nav>
+                <div class="logo">
+                    <div class="toggler-res-nav">
+                        <img src="images/white-ham.png" alt="">
+                    </div>
+                </div>
+                <div class="top">
+                    <img src="images/profile-img.png" alt="">
+                </div>
+            </nav>
+            <!-- ------main-content -->
+            <section class="con-inner finance-main">
+                <div class="container">
+                    <div class="con-head">
+                        <div class="heading">
+                            <div class="icon">
+                                <img src="images/Group 16830.png" Icon ionic-ios-create.png alt="">
+                            </div>
+                            <h4>&nbsp; Settings</h4>
+                        </div>
+                    </div>
+                   
+
+                    
+                    <div class="wrapper3">
+                        <div>
+                            <div class="order-main">
+                                <a href="add-new-order.html">
+                                    <div class="card">
+                                        <img src="images/cropped-Profile-Picture-Round-Color.png" alt="John" style="width:100%; ">
+                                        <h1 style="color:black">User Name</h1>
+                                        <br>
+                                        <p style="color:black">Jhonsmith@gmail.com</p>
+                                        <p style="color:black">030013231231</p>
+                                       
+                                        
+                                      </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="order-main" style="margin-left: 10px;">
+                                <a >
+                                    
+                                    <h1 style="color:blue;">Options</h1>
+                                    <hr>
+                                    <br>
+                                    <br>
+                                    <br>
+                                <!-- <div class="wrapper4">
+                                    <div> -->
+                                        <!-- <h3>Chats</h3> -->
+                                    <!-- <fieldset>
+                                        <div class="some-class">
+                                          <input type="radio" class="radio" name="x" value="y" id="y" />
+                                          <label for="y">Allow</label>
+                                          <input type="radio" class="radio" name="x" value="z" id="z" />
+                                          <label for="z">Disallow</label>
+                                          <input type="submit" class="radio" name="x" value="Save" id="z" />
+                                        </div>
+                                      </fieldset>
+                                      <!-- </div> -->
+                                      
+                                      <!-- <div style="margin-left: 30px;">
+                                        <h3>Notifications</h3>
+                                      <fieldset>
+                                        <div class="some-class">
+                                          <input type="radio" class="radio" name="x" value="y" id="y" />
+                                          <label for="y">Allow</label>
+                                          <input type="radio" class="radio" name="x" value="z" id="z" />
+                                          <label for="z">Disallow</label>
+                                          <input type="submit" class="radio" name="x" value="Save" id="z" />
+                                        <!-- </div> -->
+                                      <!-- </fieldset>
+                                      </div>  -->
+                                <!-- </div> -->
+
+
+                                   
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <!-- ------detail-boxes------ -->
+                   
+
+                </div>
+            </section>
+        </div>
+    </section>
+
+
+</html>
+
+</script>

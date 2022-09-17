@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances and Profits</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="main">
+        <!-- -------left side dashboard------ -->
+        <div class="dashboard dashboard-lg">
+            <div class="logo">
+                <div class="top">
+                    <img src="images/d-logo.png" alt="">
+                </div>
+            </div>
+            <h2>Admin Dashboard</h2>
+            <nav>
+                <div class="nav-item">
+                    <a href="dashboard.html">
+                        <div class="icon">
+                            <img src="images/d-1.png" alt="">
+                        </div>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="agents.html">
+                        <div class="icon">
+                            <img src="images/d-2.png" alt="">
+                        </div>
+                        <span>Agents</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="employee.html">
+                        <div class="icon">
+                            <img src="images/d-3.png" alt="">
+                        </div>
+                        <span>Employees</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="cities.html">
+                        <div class="icon">
+                            <img src="images/d-4.png" alt="">
+                        </div>
+                        <span>Cities</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="orders-1.html">
+                        <div class="icon">
+                            <img src="images/d-5.png" alt="">
+                        </div>
+                        <span>Orders</span>
+                    </a>
+                </div>
+                <!-- <div class="nav-item">
+                    <a href="transection-history.html">
+                        <div class="icon">
+                            <img src="images/d-6.png" alt="">
+                        </div>
+                        <span>Transection<br> history</span>
+                    </a>
+                </div> -->
+                <div class="nav-item">
+                    <a href="add-balance.html">
+                        <div class="icon">
+                            <img src="images/d-7.png" alt="">
+                        </div>
+                        <span>Add Balance</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="finance-and-profits.html">
+                        <div class="icon">
+                            <img src="images/d-8.png" alt="">
+                        </div>
+                        <span class="active">Finance <br> & Profits</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="expenses.html">
+                        <div class="icon">
+                            <img src="images/d-9.png" alt="">
+                        </div>
+                        <span>Expenses</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="payroll.html">
+                        <div class="icon">
+                            <img src="images/d-10.png" alt="">
+                        </div>
+                        <span>Payroll</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="chat.html">
+                        <div class="icon">
+                            <img src="images/d-11.png" alt="">
+                        </div>
+                        <span>Chat</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- ----responsive-dashboar--- -->
+        <div class="dashboard dashboard-res">
+            <div class="logo">
+                <div class="top toggler-res">
+                    <img src="images/ham.png" alt="">
+                </div>
+            </div>
+            <!-- <h2>Admin Dashboard</h2> -->
+            <nav>
+                <div class="nav-item">
+                    <a href="dashboard.html">
+                        <div class="icon">
+                            <img src="images/d-1.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="agents.html">
+                        <div class="icon">
+                            <img src="images/d-2.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="employee.html">
+                        <div class="icon">
+                            <img src="images/d-3.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="cities.html">
+                        <div class="icon">
+                            <img src="images/d-4.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="orders-1.html">
+                        <div class="icon">
+                            <img src="images/d-5.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="nav-item">
+                    <a href="transection-history.html">
+                        <div class="icon">
+                            <img src="images/d-6.png" alt="">
+                        </div>
+                    </a>
+                </div> -->
+                <div class="nav-item">
+                    <a href="">
+                        <div class="icon">
+                            <img src="images/d-7.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="finance-and-profits.html">
+                        <div class="icon">
+                            <img src="images/d-8.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="expenses.html">
+                        <div class="icon">
+                            <img src="images/d-9.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="payroll.html">
+                        <div class="icon">
+                            <img src="images/d-10.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="chat.html">
+                        <div class="icon">
+                            <img src="images/d-11.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- -------right side main content------ -->
+        <div class="main-content">
+            <nav>
+                <div class="logo">
+                    <div class="toggler-res-nav">
+                        <img src="images/white-ham.png" alt="">
+                    </div>
+                </div>
+                <div class="top">
+                    <img src="images/profile-img.png" alt="">
+                </div>
+            </nav>
+            <!-- ------main-content -->
+            <section class="con-inner finance-main">
+                <div class="container">
+                    <div class="con-head">
+                        <div class="heading">
+                            <h4>My Finances & Profits :</h4>
+                        </div>
+                    </div>
+                    <div class="sub-head">
+                        <h4>Add Balance</h4>
+                    </div>
+                    <!-- ------filters------ -->
+                    <div class="filters-main">
+                        <div class="input-field">
+                            <label for="from">From</label>
+                            <div class="input-row">
+                                <input type="date" placeholder="08/12/2022" name="from" id="from">
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="to">To</label>
+                            <div class="input-row">
+                                <input type="date" name="to" id="to">
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <div class="input-search blue2-btn">
+                                <img src="images/Icon feather-search.png" alt="">
+                                <span>Search</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------chartjs ------ -->
+
+                    <div class="wrapper2">
+                        <div>
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <!-- <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6> -->
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <!-- <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="myAreaChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="order-main">
+                                <a href="add-new-order.html">
+                                    <div class="order-box">
+                                       
+                                            <div class="icon" style="background-color:azure">
+                                                <img src="images/search-24px.png" Icon ionic-ios-create.png alt="">
+                                            </div>
+                                            <div class="order-content">
+                                                <h3>Total Profit</h3>
+                                                <h2>$500</h2>
+                                            </div>
+                                    </div>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ------detail-boxes------ -->
+                    <h3>Balance details</h3>
+                    <section class="det-main finances">
+                        <div class="det-box">
+                            <div class="det-left">
+                                <div class="bell-icon">
+                                    <img src="images/Icon ionic-ios-notifications.png" alt="">
+                                </div>
+                                <p>200 Dollar Payroll to martin</p>
+                            </div>
+                            <div class="det-right">
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon material-date-range.png" alt="">
+                                    </div>
+                                    <p>8/12/2022</p>
+                                </div>
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon ionic-md-time.png" alt="">
+                                    </div>
+                                    <p>12:22 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="det-box">
+                            <div class="det-left">
+                                <div class="bell-icon">
+                                    <img src="images/Icon ionic-ios-notifications.png" alt="">
+                                </div>
+                                <p>600 Dollar Payroll to martin</p>
+                            </div>
+                            <div class="det-right">
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon material-date-range.png" alt="">
+                                    </div>
+                                    <p>8/12/2022</p>
+                                </div>
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon ionic-md-time.png" alt="">
+                                    </div>
+                                    <p>12:22 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="det-box">
+                            <div class="det-left">
+                                <div class="bell-icon">
+                                    <img src="images/Icon ionic-ios-notifications.png" alt="">
+                                </div>
+                                <p>200 Dollar Payroll to martin</p>
+                            </div>
+                            <div class="det-right">
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon material-date-range.png" alt="">
+                                    </div>
+                                    <p>8/12/2022</p>
+                                </div>
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon ionic-md-time.png" alt="">
+                                    </div>
+                                    <p>12:22 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="det-box">
+                            <div class="det-left">
+                                <div class="bell-icon">
+                                    <img src="images/Icon ionic-ios-notifications.png" alt="">
+                                </div>
+                                <p>600 Dollar Payroll to martin</p>
+                            </div>
+                            <div class="det-right">
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon material-date-range.png" alt="">
+                                    </div>
+                                    <p>8/12/2022</p>
+                                </div>
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon ionic-md-time.png" alt="">
+                                    </div>
+                                    <p>12:22 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="det-box">
+                            <div class="det-left">
+                                <div class="bell-icon">
+                                    <img src="images/Icon ionic-ios-notifications.png" alt="">
+                                </div>
+                                <p>200 Dollar Payroll to martin</p>
+                            </div>
+                            <div class="det-right">
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon material-date-range.png" alt="">
+                                    </div>
+                                    <p>8/12/2022</p>
+                                </div>
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon ionic-md-time.png" alt="">
+                                    </div>
+                                    <p>12:22 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="det-box">
+                            <div class="det-left">
+                                <div class="bell-icon">
+                                    <img src="images/Icon ionic-ios-notifications.png" alt="">
+                                </div>
+                                <p>600 Dollar Payroll to martin</p>
+                            </div>
+                            <div class="det-right">
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon material-date-range.png" alt="">
+                                    </div>
+                                    <p>8/12/2022</p>
+                                </div>
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon ionic-md-time.png" alt="">
+                                    </div>
+                                    <p>12:22 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="det-box">
+                            <div class="det-left">
+                                <div class="bell-icon">
+                                    <img src="images/Icon ionic-ios-notifications.png" alt="">
+                                </div>
+                                <p>200 Dollar Payroll to martin</p>
+                            </div>
+                            <div class="det-right">
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon material-date-range.png" alt="">
+                                    </div>
+                                    <p>8/12/2022</p>
+                                </div>
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon ionic-md-time.png" alt="">
+                                    </div>
+                                    <p>12:22 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="det-box">
+                            <div class="det-left">
+                                <div class="bell-icon">
+                                    <img src="images/Icon ionic-ios-notifications.png" alt="">
+                                </div>
+                                <p>600 Dollar Payroll to martin</p>
+                            </div>
+                            <div class="det-right">
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon material-date-range.png" alt="">
+                                    </div>
+                                    <p>8/12/2022</p>
+                                </div>
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon ionic-md-time.png" alt="">
+                                    </div>
+                                    <p>12:22 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="det-box">
+                            <div class="det-left">
+                                <div class="bell-icon">
+                                    <img src="images/Icon ionic-ios-notifications.png" alt="">
+                                </div>
+                                <p>200 Dollar Payroll to martin</p>
+                            </div>
+                            <div class="det-right">
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon material-date-range.png" alt="">
+                                    </div>
+                                    <p>8/12/2022</p>
+                                </div>
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon ionic-md-time.png" alt="">
+                                    </div>
+                                    <p>12:22 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="det-box">
+                            <div class="det-left">
+                                <div class="bell-icon">
+                                    <img src="images/Icon ionic-ios-notifications.png" alt="">
+                                </div>
+                                <p>600 Dollar Payroll to martin</p>
+                            </div>
+                            <div class="det-right">
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon material-date-range.png" alt="">
+                                    </div>
+                                    <p>8/12/2022</p>
+                                </div>
+                                <div class="icon">
+                                    <div class="icon-img">
+                                        <img src="images/Icon ionic-md-time.png" alt="">
+                                    </div>
+                                    <p>12:22 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </section>
+        </div>
+    </section>
+    <script src="js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/chart-area-demo.js"></script>
+</body>
+
+</html>
+<script>
+    // ---responsive navbar----
+    $(document).ready(function () {
+        $(".toggler-res").click(function () {
+            $(".dashboard-res").css("display", "none");
+            $(".toggler-res-nav").css("display", "flex");
+            $(".main-content").css("width", "calc(100% - 0px)");
+        });
+    });
+
+    $(document).ready(function () {
+        $(".toggler-res-nav").click(function () {
+            $(".dashboard-res").css("display", "block");
+            $(".toggler-res").css("display", "flex");
+            $(".toggler-res-nav").css("display", "none");
+            $(".main-content").css("width", "calc(100% - 80px)");
+        });
+    });
+</script>
