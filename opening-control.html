@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order 1</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="main op-control op-con-1">
+        <!-- -------right side main content------ -->
+        <div class="main-content">
+            <nav>
+                <div class="logo">
+                    <div class="emp-logo">
+                        <img src="images/emp-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="top">
+                    <a href="opening-control-1.html">
+                    <img src="images/profile-img.png" alt="">
+                    </a>
+                </div>
+            </nav>
+            <!-- ------main-content -->
+            <section class="con-inner">
+                <div class="container">
+                    <h3>Point of Sale</h3>
+                    <div class="sale-main">
+                        <div class="sale-box">
+                            <a href="#" class="op-control-btn">
+                                <div class="sale-icon">
+                                    <img src="images/sale.png" alt="">
+                                </div>
+                                <h2>Cash Register</h2>
+                            </a>
+                        </div>
+                        <div class="sale-box">
+                            <div class="sale-box-row">
+                                <h3>Last closing date: </h3>
+                                <p>08/15/2022</p>
+                            </div>
+                            <div class="sale-box-row">
+                                <h3>Last closing cash: </h3>
+                                <p>83436423</p>
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+
+                    <div class="d-sale-main">
+                        <div class="d-sale-box">
+                            <h3>Daily Sales</h3>
+                            <p>$ 50000</p>
+                        </div>
+                        <div class="d-sale-box">
+                            <h3>Daily Sales</h3>
+                            <p>$ 50000</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+     <!-- --------popup-------- -->
+     <div class="login-main-popup-wr op-control-popup">
+        <div class="login-main popup">
+            <div class="container active">
+                <div class="popup-main">
+                    <div class="popup-head">
+                        <h4>Opening Cash Control</h4>
+                    </div>
+                    <div class="popup-body">
+                       <div class="op-top">
+                         <h3>Opening Cash</h3>
+                         <div class="op-field">
+                            <input type="text" name="" id="" placeholder="1224312124">
+                            <img src="images/sale.png" alt="">
+                         </div>
+                         
+                       </div>
+                       <div class="op-note">
+                        <textarea name="" id="" rows="10" placeholder="Notes"></textarea>
+                     </div>
+                     <div class="submit-btn">
+                        <a href="orders-1.html">
+                            <button type="submit">Submit</button>
+                        </a>
+                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $(".op-control-btn").click(function () {
+            $(".op-control-popup").show();
+        });
+        $(".cancel-btn").click(function () {
+            $(".op-control-popup").hide();
+        });
+    });
+</script>

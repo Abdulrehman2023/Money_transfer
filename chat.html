@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="main">
+        <!-- -------left side dashboard------ -->
+        <div class="dashboard dashboard-lg">
+            <div class="logo">
+                <div class="top">
+                    <img src="images/d-logo.png" alt="">
+                </div>
+            </div>
+            <h2>Admin Dashboard</h2>
+            <nav>
+                <div class="nav-item">
+                    <a href="orders-1.html">
+                        <div class="icon">
+                            <img src="images/d-5.png" alt="">
+                        </div>
+                        <span>Orders</span>
+                    </a>
+                </div>
+          
+
+                <div class="nav-item">
+                    <a href="chat.html">
+                        <div class="icon">
+                            <img src="images/d-11.png" alt="">
+                        </div>
+                        <span class="active">Chat</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="dashboard dashboard-res">
+            <div class="logo">
+                <div class="top toggler-res">
+                    <img src="images/ham.png" alt="">
+                </div>
+            </div>
+            <!-- <h2>Admin Dashboard</h2> -->
+            <nav>
+
+                <div class="nav-item">
+                    <a href="orders-1.html">
+                        <div class="icon">
+                            <img src="images/d-5.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="nav-item">
+                    <a href="transection-history.html">
+                        <div class="icon">
+                            <img src="images/d-6.png" alt="">
+                        </div>
+                    </a>
+                </div> -->
+
+                <div class="nav-item">
+                    <a href="chat.html">
+                        <div class="icon">
+                            <img src="images/d-11.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- -------right side main content------ -->
+        <div class="main-content">
+            <nav>
+                <div class="logo">
+                    <div class="toggler-res-nav">
+                        <img src="images/white-ham.png" alt="">
+                    </div>
+                </div>
+                <div class="top">
+                    <a href="opening-control-1.html">
+                        <img src="images/profile-img.png" alt="">
+                    </a>
+                </div>
+            </nav>
+            <!-- ------main-content -->
+            <section class="con-inner chat">
+                <div class="container">
+                    <div class="chat-main">
+                        <h1>Chat with admin</h1>
+                        <h3>Active Chats</h3>
+                        <div class="chat-content">
+                            <div class="chat-left">
+                                <div class="chat-search">
+                                    <input type="search" placeholder="Search people" id="chat-s">
+                                    <label for="chat-s"><img src="images/search-24px.png" alt=""></label>
+                                </div>
+                                <div class="chat-people-main">
+                                    <!-- ------person--- -->
+                                    <div class="chat-p-box">
+                                        <div class="person-img">
+                                            <img src="images/Ellipse 73.png" alt="">
+                                        </div>
+                                        <div class="person-con">
+                                            <h4>Franky Schmid</h4>
+                                            <h5>Me: What does this dummy…</h5>
+                                        </div>
+                                        <div class="person-not">
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- message-box---- -->
+                            <div class="chat-right">
+                                <div class="msg-head">
+                                    <div class="icon">
+                                        <img src="images/Icon ionic-ios-chatbubbles.png" alt="">
+                                    </div>
+                                    <h2>Chat with Employees</h2>
+                                </div>
+
+                                <div class="msg-main">
+                                    <div class="msg-body">
+                                        <div class="msg-send">
+                                            <div class="msg">
+                                                <p>Hello Franky!</p>
+                                                <p>How are you doing today?</p>
+                                                <span>09:35</span>
+                                            </div>
+                                            <div class="sender-img">
+                                                <img src="images/gt.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="msg-rec">
+                                            <div class="sender-img">
+                                                <img src="images/Ellipse 73.png" alt="">
+                                            </div>
+                                            <div class="msg">
+                                                <p>Hi George! Nice to hear you again!</p>
+                                                <p>I’m fine, thank you! And what about you? Is everything ok?</p>
+                                                <span>09:42</span>
+                                            </div>
+                                        </div>
+                                        <div class="msg-send">
+                                            <div class="msg">
+                                                <p>I'm good</p>
+                                                <p>What's going on?</p>
+                                                <span>09:45</span>
+                                            </div>
+                                            <div class="sender-img">
+                                                <img src="images/gt.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="msg-ftr">
+                                        <span>Franky is typing…</span>
+                                        <form action="">
+                                            <div class="msg-send">
+                                                <input type="search" placeholder="Enter your message here">
+                                                <div class="icons-main">
+                                                    <div class="icon">
+                                                        <img src="images/Icon awesome-smile-beam.png" alt="">
+                                                    </div>
+                                                    <div class="icon">
+                                                        <img src="images/Icon metro-attachment.png" alt="">
+                                                    </div>
+                                                    <div class="icon">
+                                                        <img src="images/Line 169.png" alt="">
+                                                    </div>
+                                                    <div class="send-btn">
+                                                        <button type="submit">
+                                                            <img src="images/Group 2137.png" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+
+</html>
+<script>
+    // ---responsive navbar----
+    $(document).ready(function () {
+        $(".toggler-res").click(function () {
+            $(".dashboard-res").css("display", "none");
+            $(".toggler-res-nav").css("display", "flex");
+            $(".main-content").css("width", "calc(100% - 0px)");
+        });
+    });
+
+    $(document).ready(function () {
+        $(".toggler-res-nav").click(function () {
+            $(".dashboard-res").css("display", "block");
+            $(".toggler-res").css("display", "flex");
+            $(".toggler-res-nav").css("display", "none");
+            $(".main-content").css("width", "calc(100% - 80px)");
+        });
+    });
+</script>

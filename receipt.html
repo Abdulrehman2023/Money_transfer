@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="main">
+        <!-- -------left side dashboard------ -->
+        <div class="dashboard dashboard-lg">
+            <div class="logo">
+                <div class="top">
+                    <img src="images/d-logo.png" alt="">
+                </div>
+            </div>
+            <h2>Admin Dashboard</h2>
+            <nav>
+
+                <div class="nav-item">
+                    <a href="orders-1.html">
+                        <div class="icon">
+                            <img src="images/d-5.png" alt="">
+                        </div>
+                        <span class="active">Orders</span>
+                    </a>
+                </div>
+                <!-- <div class="nav-item">
+                    <a href="transection-history.html">
+                        <div class="icon">
+                            <img src="images/d-6.png" alt="">
+                        </div>
+                        <span>Transection<br> history</span>
+                    </a>
+                </div> -->
+
+                <div class="nav-item">
+                    <a href="chat.html">
+                        <div class="icon">
+                            <img src="images/d-11.png" alt="">
+                        </div>
+                        <span>Chat</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="dashboard dashboard-res">
+            <div class="logo">
+                <div class="top toggler-res">
+                    <img src="images/ham.png" alt="">
+                </div>
+            </div>
+            <!-- <h2>Admin Dashboard</h2> -->
+            <nav>
+
+                <div class="nav-item">
+                    <a href="orders-1.html">
+                        <div class="icon">
+                            <img src="images/d-5.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="nav-item">
+                    <a href="transection-history.html">
+                        <div class="icon">
+                            <img src="images/d-6.png" alt="">
+                        </div>
+                    </a>
+                </div> -->
+
+                <div class="nav-item">
+                    <a href="chat.html">
+                        <div class="icon">
+                            <img src="images/d-11.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- -------right side main content------ -->
+        <div class="main-content">
+            <nav>
+                <div class="logo">
+                    <div class="toggler-res-nav">
+                        <img src="images/white-ham.png" alt="">
+                    </div>
+                </div>
+                <div class="top">
+                    <a href="opening-control-1.html">
+                        <img src="images/profile-img.png" alt="">
+                    </a>
+                </div>
+            </nav>
+            <!-- ------main-content -->
+            <section class="con-inner receipt">
+                <div class="container">
+                    <h4>Receipt</h4>
+                    <div class="receipt-main">
+                        <div class="rec-con">
+                            <div class="rec-box">
+                                <h2>Payment successfully</h2>
+                                <p>Make this user in your favorite list</p>
+                                <div class="rec-user">
+                                    <div class="rec-user-left">
+                                        <h5>Ashir Ali</h5>
+                                        <h6>port de paix</h6>
+                                    </div>
+                                    <div class="rec-user-right">
+                                        <h1>Order No. <span>01</span></h1>
+                                    </div>
+                                </div>
+                                <div class="timing">
+                                    <p>Should Arrived By </p>
+                                    <h2>10:10 PM, 21 July 2021</p>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <h3><span>Address:</span> Address will be coming here</h3>
+                                <h3><span>Zip code:</span> 515110</h3>
+                                <h3><span>Address:</span> port de paix</h3>
+                                <h3><span>Assigned Agent:</span> Alex Martin</h3>
+                            </div>
+                            <div class="amount-det-box">
+                                <div class="amount-det-container">
+                                    <div class="amount-txt">
+                                        <h3>Transfer Fees</h3>
+                                        <p>+10.00 USD</p>
+                                    </div>
+                                    <div class="amount-txt">
+                                        <h3>Amount</h3>
+                                        <p>$100.00 USD</p>
+                                    </div>
+                                </div>
+                                <div class="t-amount">
+                                    <div class="amount-det-container">
+
+                                        <div class="t-amount-txt">
+                                            <h3>Your total amount</h3>
+                                            <p>$110.00 USD</p>
+                                        </div>
+                                        <p>This job was towards you expectation you received Guaranteed
+                                            Good Service</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rec-btns">
+                            <div class="blue1-btn">
+                                <a href="#">
+                                    <img src="images/Icon feather-download.png" alt="">
+                                    Download
+                                </a>
+                            </div>
+                            <div class="blue1-btn">
+                                <a href="#">
+                                    <img src="images/Icon ionic-ios-print.png" alt="">
+                                    Print
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+
+</html>
+<script>
+    // ---responsive navbar----
+    $(document).ready(function () {
+        $(".toggler-res").click(function () {
+            $(".dashboard-res").css("display", "none");
+            $(".toggler-res-nav").css("display", "flex");
+            $(".main-content").css("width", "calc(100% - 0px)");
+        });
+    });
+
+    $(document).ready(function () {
+        $(".toggler-res-nav").click(function () {
+            $(".dashboard-res").css("display", "block");
+            $(".toggler-res").css("display", "flex");
+            $(".toggler-res-nav").css("display", "none");
+            $(".main-content").css("width", "calc(100% - 80px)");
+        });
+    });
+</script>
