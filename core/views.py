@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from twilio.rest import Client
-from django.http import HttpResponse
 
 # Create your views here.
 
@@ -55,9 +54,10 @@ def login2(request):
         get_phone = get_otp.phone
         phone_db = str(get_phone)
         phone = "+92"+phone_db
+        request.session["email"] = email
 
         account_sid = 'ACd6c5c7e6541955854a634cdc068a77b4'
-        auth_token = 'e1804047074eca7e072058ceb9fe0e89'
+        auth_token = '028493d23e1a753eb177103bcae271fb'
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
@@ -117,6 +117,33 @@ def otp(request):
         if NewUser.objects.filter(otp__icontains=otp):
             return redirect('dashboard')
         else:
-            return HttpResponse("Incorrect OTP!")
+            return HttpResponse("Incorrect OTP! ")
+
+    return render(request, 'code.html')
+
+
+def resend_otp(request):
+    if 'email' in request.session:
+        email = request.session['email']
+        get_otp = NewUser.objects.get(email=email)
+        otp = get_otp.otp
+        get_phone = get_otp.phone
+        phone_db = str(get_phone)
+        phone = "+92"+phone_db
+        account_sid = 'ACd6c5c7e6541955854a634cdc068a77b4'
+        auth_token = '028493d23e1a753eb177103bcae271fb'
+        client = Client(account_sid, auth_token)
+
+        message = client.messages.create(
+            body=f'Hi there: Your Moneytranser OTP:{otp}',
+            from_='+14422336391',
+            to=phone
+        )
+
+        print(message.sid)
+        return redirect('otp')
+
+    else:
+        return HttpResponse("login first! ")
 
     return render(request, 'code.html')

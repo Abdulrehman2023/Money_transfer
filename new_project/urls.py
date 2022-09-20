@@ -14,6 +14,9 @@ urlpatterns = [
     path('add_employee_view/', add_employee_view, name="add_employee_view"),
     path('add_agent_view/', add_agent_view, name="add_agent_view"),
     path('otp/', otp, name="otp"),
+    path('resend_otp/', resend_otp, name="resend_otp"),
+
+
 ]
 
 if settings.DEBUG:
