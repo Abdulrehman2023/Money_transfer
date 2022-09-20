@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/employee.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- ------------Donut-chart----- -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css" />
+    <link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js">
+    </script>
+</head>
+
+<body>
+    <div class="login-main">
+        <div class="container">
+            <form id="contact" action={% url 'otp' %} method="post">
+                {% csrf_token %}
+                <div class="login-form six-dig-code">
+                    <div class="ver-code">
+                        <div class="login-content">
+                            <div class="form-heading">
+                                <h2>Please enter your <br><span>6 digit code</span></h2>
+                            </div>
+                            <div class="code-des">
+                                <p>Please enter the 6 digit verification
+                                    Code sent to.</p>
+                            </div>
+
+                            <div class="code">
+                                <input type="text" maxlength="1" name="1" required>
+                                <input type="text" maxlength="1" name="2" required>
+                                <input type="text" maxlength="1" name="3" required>
+                                <input type="text" maxlength="1" name="4" required>
+                                <input type="text" maxlength="1" name="5" required>
+                                <input type="text" maxlength="1" name="6" required>
+                            </div>
+                            <div class="resend-link">
+                                <a href="#">Resend OTP</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-btn">
+
+                        <a href=""> <input type="submit"
+                                style="background-color:transparent; border: none; background-image: url(" {% static
+                                \"images/icon-arrow-left.png\" %}");"></a>
+
+
+
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+</html>

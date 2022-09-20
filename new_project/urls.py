@@ -11,6 +11,9 @@ urlpatterns = [
     path('login/', loginview, name="login"),
     path('login2/', login2, name="login2"),
     path('dashboard/', dashboard, name="dashboard"),
+    path('add_employee_view/', add_employee_view, name="add_employee_view"),
+    path('add_agent_view/', add_agent_view, name="add_agent_view"),
+    path('otp/', otp, name="otp"),
 ]
 
 if settings.DEBUG:

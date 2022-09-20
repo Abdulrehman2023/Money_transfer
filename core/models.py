@@ -5,6 +5,7 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
+import random
 
 # Create your models here.
 
@@ -57,6 +58,8 @@ class NewUser(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=150, blank=True)
     phone = models.IntegerField(max_length=150, blank=True, null=True)
     start_date = models.DateTimeField(default=timezone.now)
+    otp = models.CharField(max_length=6, default=str(
+        random.randint(100000, 999999)))
     about = models.TextField(_(
         'about'), max_length=500, blank=True)
     is_staff = models.BooleanField(default=False)
@@ -66,6 +69,20 @@ class NewUser(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['user_name', 'first_name']
+
+    def __str__(self):
+        return self.user_name
+
+
+class AddEmployeeModel(models.Model):
+    user_id = models.IntegerField(max_length=150, blank=True)
+    user_name = models.CharField(max_length=150, blank=True)
+    Email = models.EmailField(max_length=150, blank=True)
+    phone = models.IntegerField(max_length=150, blank=True)
+    Address = models.CharField(max_length=150, blank=True)
+    Country = models.CharField(max_length=150, blank=True)
+    City = models.CharField(max_length=150, blank=True)
+    password = models.CharField(max_length=150, blank=True)
 
     def __str__(self):
         return self.user_name
