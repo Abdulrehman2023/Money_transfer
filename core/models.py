@@ -115,3 +115,25 @@ class Balance(models.Model):
 
     def __str__(self):
         return self.agent
+
+
+class AddAgent(models.Model):
+    user_id = models.IntegerField(max_length=150, blank=True)
+    user_name = models.CharField(max_length=150, blank=True)
+    Email = models.EmailField(max_length=150, blank=True)
+    phone = models.IntegerField(max_length=150, blank=True)
+    Country = models.CharField(max_length=150, blank=True)
+    City = models.CharField(max_length=150, blank=True)
+    password = models.CharField(max_length=150, blank=True)
+    agent_pic = models.ImageField(
+        upload_to='images/', blank=True, null=True)
+
+    def __str__(self):
+        return self.user_name
+
+    @property
+    def get_photo_url(self):
+        if self.agent_pic and hasattr(self.agent_pic, 'url'):
+            return self.agent_pic.url
+        else:
+            return "/static/images/upload-img.png"

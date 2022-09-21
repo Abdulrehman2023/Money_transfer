@@ -6,9 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Agent</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -225,85 +224,90 @@
             <section class="con-inner">
                 <div class="container">
                     <div class="con-head">
-                        <div class="heading">
-                            <a href=" {% url 'agent_list' %}">
-                                <div class="back-btn">
-                                    <img src="{% static 'images/Icon material-arrow_back.png' %}" alt="">
+                        <h4>Agents :</h4>
+                        <div class="blue2-btn">
 
-                                </div>
-                            </a>
-
-                            <h4>Add New Agents :</h4>
+                            <a href="{% url 'add_agent_view' %}">Add new agent</a>
                         </div>
                     </div>
-                    <div class="sub-head">
-                        <h4>Add new Agent</h4>
-                    </div>
-                    <div class="add-new-main">
-                        <div class="grid-container">
+                    <div class="con-tbl">
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>Photo</th>
+                                <th>Agent name</th>
+                                <th>Agent Contact</th>
 
-                        </div>
-                        <form id="contact" action={% url 'add_agent_view' %} method="post"
-                            enctype="multipart/form-data">
-                            {% csrf_token %}
-                            <div class="fields-main">
-                                <div class="input-field">
-                                    <label for="user_id">ID</label>
-                                    <input type="text" name="user_id" id="user_id">
-                                </div>
-                                <div class="input-field">
-                                    <label for="user_name">User name</label>
-                                    <input type="text" name="user_name" id="user_name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="phone">Agent Contact</label>
-                                    <input type="text" name="phone" id="phone" required>
-                                </div>
+                                <th>City</th>
+                                <th>Country</th>
+                                <th>Action</th>
+                                <th></th>
+                                <th>Agent Details</th>
+                            </tr>
+                            {% for instance in queryset %}
+                            <tr>
+                                <td>{{instance.user_id}}</td>
 
-                                <div class="input-field">
-                                    <label for="Email">Agent Email</label>
-                                    <input type="text" name="Email" id="Email" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="Country">Country</label>
-                                    <input type="text" name="Country" id="Country" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="City">City</label>
-                                    <input type="text" name="City" id="City" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="password">Password</label>
-                                    <input type="password" name="password" id="password" required>
-                                </div>
-                                <div class="submit-btn">
-                                    <input type="submit" value="Create Agent" name="submit">
-                                </div>
-                            </div>
-                            <div class="img-main">
-                                <div class="upload-img">
-                                    <img src="{% static 'images/upload-img.png' %}" alt="">
+                                <td><img src="{{ instance.get_photo_url }}" alt=""></td>
+                                <td>{{instance.user_name}}</td>
+                                <td>{{instance.phone}}</td>
 
-                                </div>
-                                <div class="upload-btn">
-                                    <input id="agent_pic" type="file" name="agent_pic" class="custom-file-input"
-                                        required>
-                                </div>
-                            </div>
-                        </form>
+                                <td>{{instance.City}}</td>
+                                <td>{{instance.Country}}</td>
+                                <td class="action">
+                                    <div class="btn blue1-btn">
+                                        <a href="#" class="block-btn">Block</a>
+                                    </div>
+                                </td>
+                                <td class="details">
+                                    <div class="btn blue2-btn">
+                                        <a href="agents-detail.html">EDIT</a>
+                                    </div>
+                                </td>
+                                <td class="details">
+                                    <div class="btn blue2-btn">
+                                        <a href="agents-detail.html">Details</a>
+                                    </div>
+                            </tr>
+                            {% endfor %}
 
 
-                        <div id="map"></div>
+                        </table>
                     </div>
                 </div>
             </section>
         </div>
     </section>
-
-
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-        defer></script>
+    <!-- --------popup-------- -->
+    <div class="login-main-popup-wr">
+        <div class="login-main popup">
+            <div class="container active">
+                <div class="popup-main">
+                    <div class="popup-head">
+                        <div class="icon">
+                            <img src="images/block.png" alt="">
+                        </div>
+                        <h4>Block agent</h4>
+                    </div>
+                    <div class="popup-body">
+                        <div class="top-img">
+                            <img src="images/block.png" alt="">
+                        </div>
+                        <h1>Block an agent</h1>
+                        <p>Are you sure you want to block this agent?</p>
+                        <div class="popup-btns">
+                            <div class="btn btn-1">
+                                <a href="" class="cancel-btn">Cancel</a>
+                            </div>
+                            <div class="btn btn-2">
+                                <a href="">Yes block</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 from hashlib import new
 from django.shortcuts import render, redirect
-from .models import Balance, Expenses, NewUser, AddEmployeeModel
+from .models import AddAgent, Balance, Expenses, NewUser, AddEmployeeModel
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -93,16 +93,33 @@ def add_employee_view(request):
 
 
 def add_agent_view(request):
-    # if request.method == 'POST':
-    #     name = request.POST['name']
-    #     Email = request.POST['Email']
-    #     phone = request.POST['phone']
-    #     website_name = request.POST['website_name']
-    #     my_message = request.POST['my_message']
-    #     new_record = myformModel(
-    #         name=name, Email=Email, phone=phone, website_name=website_name, my_message=my_message)
-    #     new_record.save()
+
+    if request.method == 'POST' and request.FILES['agent_pic']:
+        user_id = request.POST['user_id']
+        user_name = request.POST['user_name']
+        Email = request.POST['Email']
+        phone = request.POST['phone']
+
+        Country = request.POST['Country']
+        City = request.POST['Country']
+        password = request.POST['password']
+        agent_pic = request.FILES['agent_pic']
+
+        new_record = AddAgent(
+            user_id=user_id, user_name=user_name, Email=Email, phone=phone, Country=Country, City=City, password=password, agent_pic=agent_pic)
+        new_record.save()
     return render(request, 'add-new-agent.html')
+
+
+def agent_list(request):
+    queryset = AddAgent.objects.all()
+    print(queryset)
+    context = {
+
+        'queryset': queryset
+    }
+
+    return render(request, 'agents.html', context)
 
 
 def otp(request):

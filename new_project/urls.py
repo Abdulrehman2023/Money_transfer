@@ -19,6 +19,9 @@ urlpatterns = [
     path('expenses/', expenses, name="expenses"),
     path('balance/', balance, name="balance"),
     path('Balance_details/', Balance_details, name="Balance_details"),
+    path('agent_list/', agent_list, name="agent_list"),
+
+
 
 
 
