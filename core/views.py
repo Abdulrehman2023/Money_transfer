@@ -1,6 +1,6 @@
 from hashlib import new
 from django.shortcuts import render, redirect
-from .models import Expenses, NewUser, AddEmployeeModel
+from .models import Balance, Expenses, NewUser, AddEmployeeModel
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -193,3 +193,38 @@ def expenses(request):
         return render(request, 'expenses.html', context)
 
     return render(request, 'expenses.html', context)
+
+
+def balance(request):
+
+    if request.method == 'POST':
+        date = request.POST['date']
+        time = request.POST['time']
+        amount = request.POST['amount']
+        agent = request.POST['agent']
+
+        new_record = Balance(
+            date=date, amount=amount, time=time, agent=agent)
+        new_record.save()
+
+    return render(request, 'add-balance.html')
+
+
+def Balance_details(request):
+
+    queryset = Balance.objects.all()
+    print(queryset)
+    context = {
+
+        'queryset': queryset
+    }
+    # if request.method == 'POST':
+    #     name = request.POST['name']
+    #     Email = request.POST['Email']
+    #     phone = request.POST['phone']
+    #     website_name = request.POST['website_name']
+    #     my_message = request.POST['my_message']
+    #     new_record = myformModel(
+    #         name=name, Email=Email, phone=phone, website_name=website_name, my_message=my_message)
+    #     new_record.save()
+    return render(request, 'balance-history.html', context)

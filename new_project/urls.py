@@ -17,6 +17,9 @@ urlpatterns = [
     path('resend_otp/', resend_otp, name="resend_otp"),
     path('employee_details/', employee_details, name="employee_details"),
     path('expenses/', expenses, name="expenses"),
+    path('balance/', balance, name="balance"),
+    path('Balance_details/', Balance_details, name="Balance_details"),
+
 
 
 

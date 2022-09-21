@@ -105,3 +105,13 @@ class Expenses(models.Model):
 
     def __str__(self):
         return self.used_for_purpose
+
+
+class Balance(models.Model):
+    date = models.DateField(max_length=150, blank=True)
+    time = models.TimeField(max_length=150, blank=True)
+    amount = models.IntegerField(max_length=15)
+    agent = models.CharField(max_length=150, blank=True)
+
+    def __str__(self):
+        return self.agent

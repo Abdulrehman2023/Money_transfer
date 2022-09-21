@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import NewUser, AddEmployeeModel, Expenses
+
+from core.views import balance
+from .models import NewUser, AddEmployeeModel, Expenses, Balance
 from django.contrib.auth.admin import UserAdmin
 from django.forms import TextInput, Textarea
 
@@ -30,3 +32,4 @@ class UserAdminConfig(UserAdmin):
 admin.site.register(NewUser, UserAdminConfig)
 admin.site.register(AddEmployeeModel)
 admin.site.register(Expenses)
+admin.site.register(Balance)
