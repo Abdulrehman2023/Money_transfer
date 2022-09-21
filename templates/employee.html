@@ -2,28 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/employee.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- ------------Donut-chart----- -->
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css" />
-    <link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -136,7 +122,8 @@
         <div class="dashboard dashboard-res">
             <div class="logo">
                 <div class="top toggler-res">
-                    <img src="images/ham.png" alt="">
+                    <img src="{% static 'images/ham.png' %}" alt="">
+
                 </div>
             </div>
             <!-- <h2>Admin Dashboard</h2> -->
@@ -238,84 +225,94 @@
             <section class="con-inner">
                 <div class="container">
                     <div class="con-head">
-                        <div class="heading">
-                            <a href="{% url 'employee_details' %}">
-                                <div class="back-btn">
-                                    <img src="{% static 'images/Icon material-arrow_back.png' %}" alt="">
+                        <h4>Employees :</h4>
+                        <div class="blue2-btn">
 
-                                </div>
-                            </a>
-
-                            <h4>Add New Employee :</h4>
+                            <a href="{% url 'add_employee_view' %}">Add new employees</a>
                         </div>
                     </div>
-                    <div class="sub-head">
-                        <h4>Add new Employee</h4>
-                    </div>
-                    <div class="add-new-main">
-                        <div class="grid-container">
+                    <div class="con-tbl">
+                        <table>
 
-                        </div>
-                        <form id="contact" action={% url 'add_employee_view' %} method="post"
-                            enctype="multipart/form-data">
-                            {% csrf_token %}
-                            <div class="fields-main">
-                                <div class="input-field">
-                                    <label for="user_id">ID</label>
-                                    <input type="text" name="user_id" id="user_id">
-                                </div>
-                                <div class="input-field">
-                                    <label for="user_name">User name</label>
-                                    <input type="text" name="user_name" id="user_name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="phone">Phone</label>
-                                    <input type="text" name="phone" id="phone" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="Address">Address</label>
-                                    <input type="Address" name="Address" id="Address" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="Email">Email</label>
-                                    <input type="text" name="Email" id="Email" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="Country">Country</label>
-                                    <input type="text" name="Country" id="Country" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="City">City</label>
-                                    <input type="text" name="City" id="City" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="password">Password</label>
-                                    <input type="password" name="password" id="password" required>
-                                </div>
-                                <div class="submit-btn">
-                                    <input type="submit" value="Create Employee" name="submit">
-                                </div>
-                            </div>
-                            <div class="img-main">
-                                <div class="upload-img">
-                                    <img src="{% static 'images/upload-img.png' %}" alt="">
+                            <tr>
+                                <th>ID</th>
+                                <th>Photo</th>
+                                <th>User name</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Email</th>
+                                <th>City</th>
+                                <th>Action</th>
 
-                                </div>
-                                <div class="upload-btn">
-                                    <input id="employee_pic" type="file" name="employee_pic" class="custom-file-input"
-                                        required>
-                                </div>
-                            </div>
-                        </form>
+                            </tr>
+                            {% for instance in queryset %}
+                            <tr>
+                                <td>{{instance.user_id}}</td>
 
+                                <td><img src="{{ instance.get_photo_url }}" alt=""></td>
+                                <td>{{instance.user_name}}</td>
+                                <td>{{instance.phone}}</td>
+                                <td>{{instance.Address}}</td>
+                                <td>{{instance.Email}}</td>
+                                <td>{{instance.City}}</td>
+                                <td>{{instance.Country}}</td>
+                                <td class="action">
+                                    <div class="btn blue1-btn">
+                                        <a href="#" class="block-btn">Block</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
 
-                        <div id="map"></div>
+                        </table>
                     </div>
                 </div>
             </section>
+        </div>
+    </section>
+    <!-- --------popup-------- -->
+    <div class="login-main-popup-wr">
+        <div class="login-main popup">
+            <div class="container active">
+                <div class="popup-main">
+                    <div class="popup-head">
+                        <div class="icon">
+                            <img src="images/block.png" alt="">
+                        </div>
+                        <h4>Block employee</h4>
+                    </div>
+                    <div class="popup-body">
+                        <div class="top-img">
+                            <img src="images/block.png" alt="">
+                        </div>
+                        <h1>Block an employee</h1>
+                        <p>Are you sure you want to block this employee?</p>
+                        <div class="popup-btns">
+                            <div class="btn btn-1">
+                                <a href="" class="cancel-btn">Cancel</a>
+                            </div>
+                            <div class="btn btn-2">
+                                <a href="">Yes block</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
+<script>
+    $(document).ready(function () {
+        $(".block-btn").click(function () {
+            $(".login-main-popup-wr").show();
+        });
+        $(".cancel-btn").click(function () {
+            $(".login-main-popup-wr").hide();
+        });
+    });
+</script>
 <script>
     // ---responsive navbar----
     $(document).ready(function () {

@@ -83,6 +83,25 @@ class AddEmployeeModel(models.Model):
     Country = models.CharField(max_length=150, blank=True)
     City = models.CharField(max_length=150, blank=True)
     password = models.CharField(max_length=150, blank=True)
+    employee_pic = models.ImageField(
+        upload_to='images/', blank=True, null=True)
 
     def __str__(self):
         return self.user_name
+
+    @property
+    def get_photo_url(self):
+        if self.employee_pic and hasattr(self.employee_pic, 'url'):
+            return self.employee_pic.url
+        else:
+            return "/static/images/upload-img.png"
+
+
+class Expenses(models.Model):
+    date = models.DateField(max_length=150, blank=True)
+    time = models.TimeField(max_length=150, blank=True)
+    amount = models.IntegerField(max_length=7)
+    used_for_purpose = models.CharField(max_length=150, blank=True)
+
+    def __str__(self):
+        return self.used_for_purpose

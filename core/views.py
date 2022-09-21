@@ -1,6 +1,6 @@
 from hashlib import new
 from django.shortcuts import render, redirect
-from .models import NewUser, AddEmployeeModel
+from .models import Expenses, NewUser, AddEmployeeModel
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -74,7 +74,7 @@ def login2(request):
 
 
 def add_employee_view(request):
-    if request.method == 'POST':
+    if request.method == 'POST' and request.FILES['employee_pic']:
         user_id = request.POST['user_id']
         user_name = request.POST['user_name']
         Email = request.POST['Email']
@@ -83,8 +83,11 @@ def add_employee_view(request):
         Country = request.POST['Country']
         City = request.POST['Country']
         password = request.POST['password']
+        employee_pic = request.FILES['employee_pic']
+        print(type(employee_pic))
+        print(employee_pic)
         new_record = AddEmployeeModel(
-            user_id=user_id, user_name=user_name, Email=Email, phone=phone, Address=Address, Country=Country, City=City, password=password)
+            user_id=user_id, user_name=user_name, Email=Email, phone=phone, Address=Address, Country=Country, City=City, password=password, employee_pic=employee_pic)
         new_record.save()
     return render(request, 'add-new-employee.html')
 
@@ -147,3 +150,46 @@ def resend_otp(request):
         return HttpResponse("login first! ")
 
     return render(request, 'code.html')
+
+
+def employee_details(request):
+
+    queryset = AddEmployeeModel.objects.all()
+    print(queryset)
+    context = {
+
+        'queryset': queryset
+    }
+    # if request.method == 'POST':
+    #     name = request.POST['name']
+    #     Email = request.POST['Email']
+    #     phone = request.POST['phone']
+    #     website_name = request.POST['website_name']
+    #     my_message = request.POST['my_message']
+    #     new_record = myformModel(
+    #         name=name, Email=Email, phone=phone, website_name=website_name, my_message=my_message)
+    #     new_record.save()
+    return render(request, 'employee.html', context)
+
+
+def expenses(request):
+    print("i am here")
+    queryset = Expenses.objects.all()
+    context = {
+
+        'queryset': queryset
+    }
+    if request.method == 'POST':
+        print("from form input")
+        date = request.POST['date']
+        time = request.POST['time']
+        amount = request.POST['amount']
+        used_for_purpose = request.POST['used_for_purpose']
+
+        new_record = Expenses(
+            date=date, time=time, amount=amount, used_for_purpose=used_for_purpose)
+        new_record.save()
+        print("done")
+        return render(request, 'expenses.html', context)
+
+    return render(request, 'expenses.html', context)

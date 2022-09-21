@@ -15,6 +15,12 @@ urlpatterns = [
     path('add_agent_view/', add_agent_view, name="add_agent_view"),
     path('otp/', otp, name="otp"),
     path('resend_otp/', resend_otp, name="resend_otp"),
+    path('employee_details/', employee_details, name="employee_details"),
+    path('expenses/', expenses, name="expenses"),
+
+
+
+
 
 
 ]
