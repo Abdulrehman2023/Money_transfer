@@ -1,4 +1,5 @@
 from hashlib import new
+from multiprocessing import context
 from django.shortcuts import render, redirect
 from .models import AddAgent, Balance, Expenses, NewUser, AddEmployeeModel
 from django.contrib import messages
@@ -6,7 +7,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from twilio.rest import Client
-
+from django.views import View
+from .forms import addbalanceform
 # Create your views here.
 
 
@@ -212,19 +214,27 @@ def expenses(request):
     return render(request, 'expenses.html', context)
 
 
-def balance(request):
+def add_balance(request):
+    print("------------balance-------------")
+    
+    agent_list = AddAgent.objects.all()
+
+    context = {'agent_list': agent_list}
 
     if request.method == 'POST':
-        date = request.POST['date']
-        time = request.POST['time']
         amount = request.POST['amount']
-        agent = request.POST['agent']
+        print(amount)
+        name = request.POST['agent']
+        print(name)
+        get_name = AddAgent.objects.get(user_name__icontains=name)
+        get_name.amount = (get_name.amount + int(amount))
+        get_name.save()
+        form = addbalanceform(request.POST or None)
+        if form.is_valid():
+            form.save()
+            return redirect("Balance_details")
 
-        new_record = Balance(
-            date=date, amount=amount, time=time, agent=agent)
-        new_record.save()
-
-    return render(request, 'add-balance.html')
+    return render(request, 'add-balance.html', context)
 
 
 def Balance_details(request):
@@ -245,3 +255,32 @@ def Balance_details(request):
     #         name=name, Email=Email, phone=phone, website_name=website_name, my_message=my_message)
     #     new_record.save()
     return render(request, 'balance-history.html', context)
+
+
+def payroll(request):
+    queryset = AddAgent.objects.all()
+    
+    context ={'queryset':queryset}
+    if request.method == 'POST':
+        print("------in post-----")
+        
+
+        check_list = request.POST.getlist('check')
+        amount = request.POST.getlist('amount')
+        print(amount)
+        for i in check_list:
+            print(i)
+            payroll = AddAgent.objects.get(id=i)
+            for j in amount:
+                if j != "":
+                    print("1")
+                    payroll.amount = (payroll.amount + int(j))
+                    payroll.save()
+                    break
+                    
+
+            print(payroll)
+
+        
+
+    return render(request, 'payroll.html',context)

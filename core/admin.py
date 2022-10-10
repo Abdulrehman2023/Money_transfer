@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from core.views import balance
+from core.views import Balance
 from .models import NewUser, AddEmployeeModel, Expenses, Balance, AddAgent
 from django.contrib.auth.admin import UserAdmin
 from django.forms import TextInput, Textarea

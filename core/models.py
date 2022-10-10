@@ -6,14 +6,14 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 import random
-
+import core
 # Create your models here.
 
 
 class myformModel(models.Model):
     name = models.CharField(max_length=150, blank=True)
     Email = models.EmailField(max_length=150, blank=True)
-    phone = models.IntegerField(max_length=150, blank=True)
+    phone = models.IntegerField(blank=True)
     website_name = models.CharField(max_length=150, blank=True)
     my_message = models.CharField(max_length=150, blank=True)
 
@@ -56,7 +56,7 @@ class NewUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('email address'), unique=True)
     user_name = models.CharField(max_length=150, unique=True)
     first_name = models.CharField(max_length=150, blank=True)
-    phone = models.IntegerField(max_length=150, blank=True, null=True)
+    phone = models.IntegerField(blank=True, null=True)
     start_date = models.DateTimeField(default=timezone.now)
     otp = models.CharField(max_length=6, default=str(
         random.randint(100000, 999999)))
@@ -75,10 +75,10 @@ class NewUser(AbstractBaseUser, PermissionsMixin):
 
 
 class AddEmployeeModel(models.Model):
-    user_id = models.IntegerField(max_length=150, blank=True)
+    user_id = models.IntegerField(blank=True)
     user_name = models.CharField(max_length=150, blank=True)
     Email = models.EmailField(max_length=150, blank=True)
-    phone = models.IntegerField(max_length=150, blank=True)
+    phone = models.IntegerField(blank=True)
     Address = models.CharField(max_length=150, blank=True)
     Country = models.CharField(max_length=150, blank=True)
     City = models.CharField(max_length=150, blank=True)
@@ -100,33 +100,25 @@ class AddEmployeeModel(models.Model):
 class Expenses(models.Model):
     date = models.DateField(max_length=150, blank=True)
     time = models.TimeField(max_length=150, blank=True)
-    amount = models.IntegerField(max_length=7)
+    amount = models.IntegerField()
     used_for_purpose = models.CharField(max_length=150, blank=True)
 
     def __str__(self):
         return self.used_for_purpose
 
 
-class Balance(models.Model):
-    date = models.DateField(max_length=150, blank=True)
-    time = models.TimeField(max_length=150, blank=True)
-    amount = models.IntegerField(max_length=15)
-    agent = models.CharField(max_length=150, blank=True)
-
-    def __str__(self):
-        return self.agent
-
-
 class AddAgent(models.Model):
-    user_id = models.IntegerField(max_length=150, blank=True)
+
+    user_id = models.IntegerField(blank=True)
     user_name = models.CharField(max_length=150, blank=True)
     Email = models.EmailField(max_length=150, blank=True)
-    phone = models.IntegerField(max_length=150, blank=True)
+    phone = models.IntegerField(blank=True)
     Country = models.CharField(max_length=150, blank=True)
     City = models.CharField(max_length=150, blank=True)
     password = models.CharField(max_length=150, blank=True)
     agent_pic = models.ImageField(
         upload_to='images/', blank=True, null=True)
+    amount = models.IntegerField(blank=True,default=0)
 
     def __str__(self):
         return self.user_name
@@ -137,3 +129,15 @@ class AddAgent(models.Model):
             return self.agent_pic.url
         else:
             return "/static/images/upload-img.png"
+
+
+class Balance(models.Model):
+    # agent1 = models.ForeignKey(AddAgent, on_delete=models.CASCADE)
+    date = models.DateField(max_length=150, blank=True)
+    time = models.TimeField(max_length=150, blank=True)
+    amount = models.IntegerField( blank=True)
+    agent = models.CharField(max_length=150, blank=True)
+    
+
+    def __str__(self):
+        return self.agent
