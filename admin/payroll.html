@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- bootstrap icon  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="main">
+        <!-- -------left side dashboard------ -->
+        <div class="dashboard dashboard-lg">
+            <div class=" logo">
+                <div style="width: 14rem;" class="top">
+                    <img width="100%" class="pt-2" src="./images/aside-logo.png" alt="">
+                </div>
+            </div>
+            <h2>Admin Dashboard</h2>
+            <nav>
+                <div class=" nav-item">
+                    <a href="dashboard.html">
+                        <div class="icon">
+                            <img src="images/d-1.png" alt="">
+                        </div>
+                        <span class="">Dashboard</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="agents.html">
+                        <div class="icon">
+                            <img src="images/d-2.png" alt="">
+                        </div>
+                        <span>Agents</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="employee.html">
+                        <div class="icon">
+                            <img src="images/d-3.png" alt="">
+                        </div>
+                        <span>Employees</span>
+                    </a>
+                </div>
+                <!-- <div class="nav-item">
+                    <a href="cities.html">
+                        <div class="icon">
+                            <img src="images/d-4.png" alt="">
+                        </div>
+                        <span>Cities</span>
+                    </a>
+                </div> -->
+                <div class="nav-item">
+                    <a href="orders-1.html">
+                        <div class="icon">
+                            <img src="images/d-5.png" alt="">
+                        </div>
+                        <span>Orders</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="transection-history.html">
+                        <div class="icon">
+                            <img src="images/d-6.png" alt="">
+                        </div>
+                        <span>Transection<br> history</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="add-balance.html">
+                        <div class="icon">
+                            <img src="images/d-7.png" alt="">
+                        </div>
+                        <span>Add Balance</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="finance-and-profits.html">
+                        <div class="icon">
+                            <img src="images/d-8.png" alt="">
+                        </div>
+                        <span>Finance <br> & Profits</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="expenses.html">
+                        <div class="icon">
+                            <img src="images/d-9.png" alt="">
+                        </div>
+                        <span>Expenses</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="payroll.html">
+                        <div class="icon">
+                            <img src="images/d-10.png" alt="">
+                        </div>
+                        <span class="active">Payroll</span>
+                    </a>
+                </div>
+                <!-- <div class="nav-item">
+                    <a href="chat.html">
+                        <div class="icon">
+                            <img src="images/d-11.png" alt="">
+                        </div>
+                        <span>Chat</span>
+                    </a>
+                </div> -->
+            </nav>
+        </div>
+        <!-- ----responsive-dashboar--- -->
+        <div class="dashboard dashboard-res">
+            <div class="logo">
+                <div class="top toggler-res">
+                    <img src="images/ham.png" alt="">
+                </div>
+            </div>
+            <!-- <h2>Admin Dashboard</h2> -->
+            <nav class="">
+                <div class=" nav-item">
+                    <a href="dashboard.html">
+                        <div class="icon">
+                            <img src="images/d-1.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="agents.html">
+                        <div class="icon">
+                            <img src="images/d-2.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="employee.html">
+                        <div class="icon">
+                            <img src="images/d-3.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="cities.html">
+                        <div class="icon">
+                            <img src="images/d-4.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="orders-1.html">
+                        <div class="icon">
+                            <img src="images/d-5.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="transection-history.html">
+                        <div class="icon">
+                            <img src="images/d-6.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="">
+                        <div class="icon">
+                            <img src="images/d-7.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="finance-and-profits.html">
+                        <div class="icon">
+                            <img src="images/d-8.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="expenses.html">
+                        <div class="icon">
+                            <img src="images/d-9.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="payroll.html">
+                        <div class="icon">
+                            <img src="images/d-10.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="chat.html">
+                        <div class="icon">
+                            <img src="images/d-11.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- -------right side main content------ -->
+        <div class="main-content">
+            <nav class="">
+                <div class="logo">
+                    <div class="toggler-res-nav">
+                        <img src="images/white-ham.png" alt="">
+                    </div>
+                </div>
+                <div class="" id="bell">
+                    <img src="./images/Component 38 – 2.png" alt="">
+                </div>
+            </nav>
+            <!-- profile drop down  -->
+            <div class="d-flex justify-content-center align-items-center p-1">
+                <div>
+                  <!-- <i class="icon bi bi-bell" id="bell"></i> -->
+                  <div class="notifications " id="box">
+                    <div class="notifications-item">
+                        <div class="text">
+                            <i class=" bi bi-person" style="font-size: 1.5rem;"></i>
+                            <a class="text-dark" href="./all-customers.html">
+                                Custormer
+                            </a>
+                        </div>
+                    </div>
+                    <div class="notifications-item">
+                      <div class="text">
+                        <i class="bi bi-gear" style="font-size: 1.5rem;"></i>
+                        <a class="text-dark" href="./settings.html">
+                            Settings
+                        </a>
+                      </div>
+                    </div>
+                    <div class="notifications-item">
+                      <div class="text">
+                        <i class="bi bi-box-arrow-in-right"  style="font-size: 1.5rem;"></i>
+                        <a class="text-dark" href="#">
+                            Logout
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+         
+                  <script>
+                    $(document).ready(function(){
+                
+                    var down = false;
+                    
+                    $('#bell').click(function(e){
+                      
+                        var color = $(this).text();
+                        if(down){
+                            
+                            $('#box').css('height','0px');
+                            $('#box').css('opacity','0');
+                            down = false;
+                        }else{
+                            
+                            $('#box').css('height','auto');
+                            $('#box').css('opacity','1');
+                            down = true;
+                            
+                        }
+                        
+                    });
+                        
+                        });
+                  </script>
+         
+                  <style>
+                    a{
+                        text-decoration: none;
+                    }
+                    .icon {
+                      cursor: pointer;
+                      margin-right: 5px;
+                      /* line-height: 60px; */
+                    }
+                    .icon span {
+                      background: #f00;
+                      padding: 7px;
+                      border-radius: 50%;
+                      color: #fff;
+                      vertical-align: top;
+                      /* margin-left: -25px; */
+                    }
+                    .icon img {
+                      display: inline-block;
+                      width: 26px;
+                      margin-top: 4px;
+                    }
+                    .icon:hover {
+                      opacity: 0.7;
+                    }
+                    .logo {
+                      flex: 1;
+                      /* margin-left: 50px; */
+                      color: #eee;
+                      font-size: 20px;
+                      font-family: monospace;
+                    }
+                    .notifications {
+                      width: 150px;
+                      height: 0px;
+                      opacity: 0;
+                      position: absolute;
+                      top: 63px;
+                      right: 62px;
+                      border-radius: 5px 0px 5px 5px;
+                      background-color: #fff;
+                      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                       0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    }
+                    .notifications h2 {
+                      font-size: 14px;
+                      padding: 10px;
+                      border-bottom: 1px solid #eee;
+                      color: #999;
+                    }
+                    .notifications h2 span {
+                      color: #f00;
+                    }
+                    .notifications-item {
+                      display: flex;
+                      border-bottom: 1px solid #eee;
+                      padding: 6px 9px;
+                      margin-bottom: 0px;
+                      cursor: pointer;
+                    }
+                    .notifications-item:hover {
+                      background-color: #eee;
+                    }
+                    .notifications-item img {
+                      display: block;
+                      width: 50px;
+                      height: 50px;
+                      margin-right: 9px;
+                      border-radius: 50%;
+                      margin-top: 2px;
+                    }
+                    .notifications-item .text h4 {
+                      color: #777;
+                      font-size: 16px;
+                      margin-top: 3px;
+                    }
+                    .notifications-item .text p {
+                      color: #aaa;
+                      font-size: 12px;
+                    }
+                  </style>
+                <!-- <div>
+                  <span class="text-white fs-small p-0">Diane Ward</span>
+                </div>
+                <div class="p-3">
+                  <img
+                    src="./asset/Ellipse 461.svg"
+                    alt="user-icon"
+                    style="width: 2.5rem"
+                  />
+                </div> -->
+              </div>
+            
+            <!-- ------main-content -->
+            <section class="con-inner cr-order payroll">
+                <div class="container">
+                    <div class="con-head">
+                        <div class="heading">
+                            <h4>Payroll :</h4>
+                        </div>
+                    </div>
+
+                    <!-- ----table-------- -->
+                    <div class="con-tbl">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Name</th>
+                                    <th>Country</th>
+                                    <th>City</th>
+                                    <th>Amount</th>
+                                    <th>Action</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                               
+
+                                <tr>
+                                    <td>8/6/2022</td>
+                                    <td>Adam Johns</td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>Country</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>City name</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <!-- ----to hide--- -->
+                                        <div class="order-amount">
+                                            <div class="icon">
+                                                <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                            </div>
+                                            <span>USD 400</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="amount-main">
+                                            <div class="input-main">
+                                                <div class="icon">
+                                                    <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                                </div>
+                                                <input type="text" placeholder="Send amount">
+                                            </div>
+                                            <div class="sel-field">
+                                                <select name="" id="">
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="check-btn">
+                                        <div class="order-check">
+                                            <label class="container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>8/6/2022</td>
+                                    <td>Adam Johns</td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>Country</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>City name</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <!-- ----to hide--- -->
+                                        <div class="order-amount">
+                                            <div class="icon">
+                                                <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                            </div>
+                                            <span>USD 400</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="amount-main">
+                                            <div class="input-main">
+                                                <div class="icon">
+                                                    <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                                </div>
+                                                <input type="text" placeholder="Send amount">
+                                            </div>
+                                            <div class="sel-field">
+                                                <select name="" id="">
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="check-btn">
+                                        <div class="order-check">
+                                            <label class="container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>8/6/2022</td>
+                                    <td>Adam Johns</td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>Country</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>City name</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <!-- ----to hide--- -->
+                                        <div class="order-amount">
+                                            <div class="icon">
+                                                <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                            </div>
+                                            <span>USD 400</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="amount-main">
+                                            <div class="input-main">
+                                                <div class="icon">
+                                                    <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                                </div>
+                                                <input type="text" placeholder="Send amount">
+                                            </div>
+                                            <div class="sel-field">
+                                                <select name="" id="">
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="check-btn">
+                                        <div class="order-check">
+                                            <label class="container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>8/6/2022</td>
+                                    <td>Adam Johns</td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>Country</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>City name</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <!-- ----to hide--- -->
+                                        <div class="order-amount">
+                                            <div class="icon">
+                                                <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                            </div>
+                                            <span>USD 400</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="amount-main">
+                                            <div class="input-main">
+                                                <div class="icon">
+                                                    <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                                </div>
+                                                <input type="text" placeholder="Send amount">
+                                            </div>
+                                            <div class="sel-field">
+                                                <select name="" id="">
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="check-btn">
+                                        <div class="order-check">
+                                            <label class="container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8/6/2022</td>
+                                    <td>Adam Johns</td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>Country</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>City name</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <!-- ----to hide--- -->
+                                        <div class="order-amount">
+                                            <div class="icon">
+                                                <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                            </div>
+                                            <span>USD 400</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="amount-main">
+                                            <div class="input-main">
+                                                <div class="icon">
+                                                    <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                                </div>
+                                                <input type="text" placeholder="Send amount">
+                                            </div>
+                                            <div class="sel-field">
+                                                <select name="" id="">
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="check-btn">
+                                        <div class="order-check">
+                                            <label class="container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8/6/2022</td>
+                                    <td>Adam Johns</td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>Country</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>City name</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <!-- ----to hide--- -->
+                                        <div class="order-amount">
+                                            <div class="icon">
+                                                <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                            </div>
+                                            <span>USD 400</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="amount-main">
+                                            <div class="input-main">
+                                                <div class="icon">
+                                                    <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                                </div>
+                                                <input type="text" placeholder="Send amount">
+                                            </div>
+                                            <div class="sel-field">
+                                                <select name="" id="">
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="check-btn">
+                                        <div class="order-check">
+                                            <label class="container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8/6/2022</td>
+                                    <td>Adam Johns</td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>Country</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>City name</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <!-- ----to hide--- -->
+                                        <div class="order-amount">
+                                            <div class="icon">
+                                                <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                            </div>
+                                            <span>USD 400</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="amount-main">
+                                            <div class="input-main">
+                                                <div class="icon">
+                                                    <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                                </div>
+                                                <input type="text" placeholder="Send amount">
+                                            </div>
+                                            <div class="sel-field">
+                                                <select name="" id="">
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="check-btn">
+                                        <div class="order-check">
+                                            <label class="container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8/6/2022</td>
+                                    <td>Adam Johns</td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>Country</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>City name</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <!-- ----to hide--- -->
+                                        <div class="order-amount">
+                                            <div class="icon">
+                                                <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                            </div>
+                                            <span>USD 400</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="amount-main">
+                                            <div class="input-main">
+                                                <div class="icon">
+                                                    <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                                </div>
+                                                <input type="text" placeholder="Send amount">
+                                            </div>
+                                            <div class="sel-field">
+                                                <select name="" id="">
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="check-btn">
+                                        <div class="order-check">
+                                            <label class="container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8/6/2022</td>
+                                    <td>Adam Johns</td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>Country</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                                <option value="">country</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <div class="order-city">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <span>City name</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="td-prev">
+                                        <!-- ----to hide--- -->
+                                        <div class="order-amount">
+                                            <div class="icon">
+                                                <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                            </div>
+                                            <span>USD 400</span>
+                                        </div>
+                                    </td>
+                                    <!-- -----to show--- -->
+                                    <td class="td-next">
+                                        <div class="amount-main">
+                                            <div class="input-main">
+                                                <div class="icon">
+                                                    <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                                </div>
+                                                <input type="text" placeholder="Send amount">
+                                            </div>
+                                            <div class="sel-field">
+                                                <select name="" id="">
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="check-btn">
+                                        <div class="order-check">
+                                            <label class="container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="add-tbl">
+                            <tbody>
+                                <tr>
+                                    <td>8/6/2022</td>
+                                    <td class="text-center">
+                                        <div class="order-input">
+                                        <input type="text" name="" id="">
+                                    </div>
+                                    </td>
+                                    <td>
+                                        <div class="order-input">
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="order-select-main">
+                                            <div class="icon">
+                                                <img src="images/city.png" alt="">
+                                            </div>
+                                            <select name="" id="">
+                                                <option value="">Country</option>
+                                                <option value="">Country</option>
+                                                <option value="">Country</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="order-select-main">
+                                            
+                                            <select name="" id="">
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                                <option value="">City name</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    
+                                    <td>
+                                        <div class="amount-main">
+                                            <div class="input-main">
+                                                <div class="icon">
+                                                    <img src="images/financial-currency-svgrepo-com.png" alt="">
+                                                </div>
+                                                <input type="text" placeholder="Send amount">
+                                            </div>
+                                            <div class="sel-field">
+                                                <select name="" id="">
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                    <option value="">usd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="btn blue2-btn">
+                                            <a href="">Add</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- ------place-order----- -->
+                    <div class="place-order-main">
+                        <div class="p-order-left">
+                            <div class="p-order-box">
+                                <h5>Pay for ONE Agent.</h5>
+                                <div class="place-order-btn">
+                                    <a href="#">Pay</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="p-order-right">
+                            <button class="add-transection">
+                                <a href="#" class="add-t-btn">
+                                    <span>Add new</span>
+                                    <div class="icon">
+                                        <img src="images/Group 16118.png" alt="">
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                        
+                    <script>
+                        $(document).ready(function () {
+                            $(".add-t-btn").click(function () {
+                                $("table.add-tbl").show();
+                            });
+
+                        });
+                    </script>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<script>
+    // ---responsive navbar----
+    $(document).ready(function () {
+        $(".toggler-res").click(function () {
+            $(".dashboard-res").css("display", "none");
+            $(".toggler-res-nav").css("display", "flex");
+            $(".main-content").css("width", "calc(100% - 0px)");
+        });
+    });
+
+    $(document).ready(function () {
+        $(".toggler-res-nav").click(function () {
+            $(".dashboard-res").css("display", "block");
+            $(".toggler-res").css("display", "flex");
+            $(".toggler-res-nav").css("display", "none");
+            $(".main-content").css("width", "calc(100% - 80px)");
+        });
+    });
+
+    // ---------td-click----
+    $(document).ready(function () {
+        $(".check-btn").click(function () {
+            $(this).siblings('.td-prev').toggleClass("td-before");
+        });
+    });
+
+    $(document).ready(function () {
+        $(".check-btn").click(function () {
+            $(this).siblings('.td-next').toggleClass("td-after");
+        });
+    });
+</script>

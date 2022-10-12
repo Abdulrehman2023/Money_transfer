@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Order 1</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="main op-control op-con-1">
+        <!-- -------right side main content------ -->
+        <div class="main-content">
+            <nav>
+                <div class="logo">
+                    <div class="emp-logo">
+                        <img src="./images/nav-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="top">
+                    <a href="opening-control-1.html">
+                    <img src="./images/Component 38 – 2.png" alt="">
+                    </a>
+                </div>
+            </nav>
+            <!-- ------main-content -->
+            <section class="con-inner">
+                <div class="container d-flex flex-column flex-md-row">
+                    <div class="w_50">
+                        <!-- <div class="w_75 d-flex justify-content-between">
+                            <h3>Point of Sale</h3>
+                            <a class="  p-2 shadow p-3 text-white rounded"  style="background-color:#197ABD ; ">
+                                    Go To Order page
+                            </a>
+                        </div> -->
+
+                    <div class=" sale-main  d-flex flex-column ">
+                        <div class="sale-box">
+                            <a href="#" class=" op-control-btn" >
+                                <div class="sale-icon">
+                                    <img src="images/sale.png" alt="">
+                                </div>
+                                <h2>Cash Register</h2>
+                            </a>
+                        </div>
+                        <div class="sale-box ">
+                            <div class="sale-box-row">
+                                <h3>Last closing date: </h3>
+                                <p>08/15/2022</p>
+                            </div>
+                            <div class="sale-box-row">
+                                <h3>Last closing cash: </h3>
+                                <p>83436423</p>
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+<!-- 
+                    <div class="test d-sale-main d-flex flex-column ">
+                        <div class="d-sale-box">
+                            <h3>Daily Sales</h3>
+                            <p>$ 50000</p>
+                        </div>
+                        <div class="d-sale-box mt-3">
+                            <h3>Daily Sales</h3>
+                            <p>$ 50000</p>
+                        </div>
+                    </div> -->
+                </div>
+                    <div class="w_50  p-3 border rounded">
+                        <div class="shadow p-3 mb-5 bg-white rounded w_50">
+                            <div class="d-flex justify-content-between">
+                                <p class="fw-bold">
+                                    $5500
+                                </p>
+                                <p class="fw-bold">
+                                    5/12/2022
+                                </p>
+                            </div>
+                            <p>
+                                Notes will be saved here
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- <div onclick="testCase()" class="redirect">
+            testing page reload
+        </div> -->
+    </section>
+     <!-- --------popup-------- -->
+     <div class="login-main-popup-wr op-control-popup">
+            <div class="login-main popup">
+                <div class="container active">
+                    <div class="popup-main">
+                        <div class="popup-head">
+                            <h4>Opening Cash Control</h4>
+                        </div>
+                        <div class="popup-body">
+                           <div class="op-top">
+                             <h3>Opening Cash</h3>
+                             <div class="op-field">
+                                <input type="text" name="" id="opencash" placeholder="1224312124" required>
+                                <img src="images/sale.png" alt="">
+                             </div>
+                             
+                           </div>
+                           <div class="op-note">
+                            <textarea name="" id="notes" rows="10" placeholder="Notes"required></textarea>
+                         </div>
+                         <div class="submit-btn d-flex flex-column flex-md-row gap-2">
+                                <button onclick="testCase()"  type="submit">
+                                    submit
+                                </button>
+                                <button class="btn btn-danger cancel-btn" onclick="">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <a href="./orders-1.html" class="" id="pageNavigate"></a>
+     <script>
+        const testCase = () => {
+            const opencash = $("#opencash")[0].value;
+            const notes = $("#notes")[0].value;
+            if(opencash !== "" && notes !== "" )
+                window.location.replace("/orders-1.html");
+        }
+    </script>
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $(".op-control-btn").click(function () {
+            $(".op-control-popup").show();
+        });
+        $(".cancel-btn").click(function () {
+            $(".op-control-popup").hide();
+        });
+    });
+</script>
